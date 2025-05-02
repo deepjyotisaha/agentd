@@ -239,6 +239,8 @@ async def search(query: str, ctx: Context, max_results: int = 10) -> str:
         query: The search query string
         max_results: Maximum number of results to return (default: 10)
         ctx: MCP context for logging
+
+    Usage: search|query="example" 
     """
     try:
         logger.info(f"Searching DuckDuckGo for: {query}")

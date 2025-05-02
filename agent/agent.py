@@ -6,6 +6,9 @@ from core.loop import AgentLoop
 from core.session import MultiMCP
 import warnings
 import os
+from channels.telegram import TelegramChannel
+from channels.manager import ChannelManager
+from channels.chrome import ChromeChannel
 
 from config.log_config import setup_logging
 
@@ -23,34 +26,36 @@ def log(stage: str, msg: str):
 async def main():
     print("🧠 Cortex-R Agent getting ready...")
 
-    # Load MCP server configs from profiles.yaml
+    # Load config
     with open("config/profiles.yaml", "r") as f:
         profile = yaml.safe_load(f)
         mcp_servers = profile.get("mcp_servers", [])
-        interaction_channel = profile.get("interaction_channel", "CLI")
+        interaction_channel = profile.get("interaction_channel", "telegram").lower()
+        channel_config = next(
+            (ch for ch in profile.get("channels", []) if ch["type"] == interaction_channel), None
+        )
 
-    print("interaction_channel:", interaction_channel)
+    ready_flag = asyncio.Event()
 
+    # Initialize MCP
     multi_mcp = MultiMCP(server_configs=mcp_servers)
-    print("Agent before initialize")
     await multi_mcp.initialize()
 
-    print("🧠 Cortex-R Agent is now ready to go and is listening for messages from the user at:", interaction_channel)
+    # Initialize the selected channel
+    if interaction_channel == "telegram":
+        channel = TelegramChannel(multi_mcp, ready_flag)
+    elif interaction_channel == "chrome":
+        channel = ChromeChannel(url=channel_config.get("url", "http://localhost:5000"), ready_flag=ready_flag)
+    else:
+        raise ValueError(f"Unknown interaction_channel: {interaction_channel}")
+
+    channel_manager = ChannelManager([channel])
+    await channel_manager.start()
+    ready_flag.set()
+    print(f"🧠 Cortex-R Agent is now ready and listening on: {interaction_channel}")
 
     while True:
-        if interaction_channel == "CLI":
-            user_input = input("🧑 What do you want to solve today? (type 'exit' to quit) → ")
-            # === CLI Mode ===
-        elif interaction_channel == "Telegram":
-            try:
-                user_input = input("🧑 What do you want to solve today? (type 'exit' to quit) → ")
-                result = await multi_mcp.call_tool("get-next-telegram-message", {})
-                user_input = result.content[0].text
-                print(f"Telegram message: {user_input}")
-            except Exception as e:
-                print(f"Error polling Telegram: {e}")
-                await asyncio.sleep(2)  
-
+        user_id, user_input = await channel_manager.get_query()
         if user_input.strip().lower() in {"exit", "quit", ""}:
             print("👋 Goodbye!")
             break
@@ -62,23 +67,12 @@ async def main():
 
         try:
             final_response = await agent.run()
-            print("final_response:", final_response)
-            if interaction_channel == "CLI":
-                print("\n💡 Final Answer:\n", final_response.replace("FINAL_ANSWER:", "").strip())
-            elif interaction_channel == "Telegram":
-                print("Attempting to send telegram message")
-                try:
-                    print(f"Calling send-telegram-message with message: {final_response.replace('FINAL_ANSWER:', '').strip()}")
-                    await multi_mcp.call_tool("send-telegram-message", {
-                        "text": final_response.replace("FINAL_ANSWER:", "").strip()
-                    })
-                    print("Sending message to telegram completed")
-                except Exception as e:
-                    print(f"Error in sending telegram message: {str(e)}")
+            await channel_manager.send_response(final_response.replace("FINAL_ANSWER:", "").strip(), user_id)
         except Exception as e:
             log("fatal", f"Agent failed: {e}")
             raise
 
+    await channel_manager.stop()
     await multi_mcp.shutdown()
 
 

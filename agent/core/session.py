@@ -11,6 +11,9 @@ import warnings
 from core.sse_client import sse_tool_call
 import httpx
 from mcp.types import Tool  # Adjust as needed
+from config.log_config import setup_logging
+
+logger = setup_logging(__name__)
 
 
 class MCP:
@@ -161,6 +164,15 @@ class MultiMCP:
                     print(f"❌ Unknown server type: {config['type']}")
             except Exception as e:
                 print(f"❌ Error initializing MCP server {config.get('script', config.get('url', 'unknown'))}: {e}")
+
+        logger.info("=== All Tool Details ===")
+        for tool_name, entry in self.tool_map.items():
+            tool = entry["tool"]
+            logger.info(f"Name: {getattr(tool, 'name', 'N/A')}")
+            logger.info(f"Description: {getattr(tool, 'description', 'No description')}")
+            logger.info(f"Schema: {getattr(tool, 'parameters', 'No schema')}")
+            logger.info("-" * 40)
+
         await self._cleanup()
 
     async def call_tool(self, tool_name: str, arguments: dict) -> Any:
