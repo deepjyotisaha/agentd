@@ -67,7 +67,7 @@ async def main():
 
         try:
             final_response = await agent.run()
-            await channel_manager.send_response(final_response.replace("FINAL_ANSWER:", "").strip(), user_id)
+            await channel_manager.send_response(final_response, user_id)
         except Exception as e:
             log("fatal", f"Agent failed: {e}")
             raise

@@ -115,7 +115,7 @@ Respond in **exactly one line** using one of the following formats:
 Follow the examples, and look into the error messages to improve the plan.
 
 ✅ Examples:
-- User asks: "What’s the relationship between Cricket and Sachin Tendulkar"
+- User asks: "What's the relationship between Cricket and Sachin Tendulkar"
   - FUNCTION_CALL: search_documents|query="relationship between Cricket and Sachin Tendulkar"
   - [receives a detailed document]
   - FINAL_ANSWER: [Sachin Tendulkar is widely regarded as the "God of Cricket" due to his exceptional skills, longevity, and impact on the sport in India. He is the leading run-scorer in both Test and ODI cricket, and the first to score 100 centuries in international cricket. His influence extends beyond his statistics, as he is seen as a symbol of passion, perseverance, and a national icon. ]
@@ -145,10 +145,12 @@ SEND THIS INSTEAD:
         raw = (await model.generate_text(prompt)).strip()
         log("plan", f"LLM output: {raw}")
 
+        if "FINAL_ANSWER:" in raw:
+            idx = raw.find("FINAL_ANSWER:")
+            return raw[idx:].strip()
         for line in raw.splitlines():
-            if line.strip().startswith("FUNCTION_CALL:") or line.strip().startswith("FINAL_ANSWER:"):
+            if line.strip().startswith("FUNCTION_CALL:"):
                 return line.strip()
-
         return "FINAL_ANSWER: [unknown]"
 
     except Exception as e:

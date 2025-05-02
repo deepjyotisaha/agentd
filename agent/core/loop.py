@@ -106,12 +106,8 @@ class AgentLoop:
                 print(f"[plan] {plan}")
 
                 if "FINAL_ANSWER:" in plan:
-                    # Optionally extract the final answer portion
-                    final_lines = [line for line in plan.splitlines() if line.strip().startswith("FINAL_ANSWER:")]
-                    if final_lines:
-                        self.context.final_answer = final_lines[-1].strip()
-                    else:
-                        self.context.final_answer = "FINAL_ANSWER: [result found, but could not extract]"
+                    idx = plan.find("FINAL_ANSWER:")
+                    self.context.final_answer = plan[idx + len("FINAL_ANSWER:"):].strip()
                     break
 
 
