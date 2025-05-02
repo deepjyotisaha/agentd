@@ -36,13 +36,12 @@ class ChromeChannel(Channel):
         @self.app.get("/query")
         async def query(request: Request, message: str):
             user_id = "chrome"
-            if self.channel_manager is None:
-                return JSONResponse({"error": "Server not ready"}, status_code=503)
             future = asyncio.get_event_loop().create_future()
             self.response_futures[user_id] = future
-            await self.channel_manager.queue_query(self, user_id, message)
+            await self.query_queue.put((user_id, message))
             try:
                 response = await future
+                print(f"Returning to Chrome: {response}")
                 return JSONResponse({"type": "final", "content": response})
             except Exception as e:
                 return JSONResponse({"error": str(e)}, status_code=500)
@@ -50,8 +49,7 @@ class ChromeChannel(Channel):
     def set_channel_manager(self, channel_manager):
         self.channel_manager = channel_manager
 
-    async def get_query(self) -> str:
-        # Wait for a query from the extension
+    async def get_query(self) -> tuple[str, str]:
         return await self.query_queue.get()
 
     async def send_response(self, message: str, user_id: str):

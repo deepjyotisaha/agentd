@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stock Research Assistant</title>
+    <title>Cortex D Agent</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -47,6 +47,7 @@
         .message-content {
             position: relative;
             width: 100%;
+            font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', sans-serif;
         }
         
         /* Allow dynamic styles to work */
@@ -61,7 +62,7 @@
             <div class="header-content">
                 <img src="icons/icon48.png" alt="Assistant Icon" class="header-icon">
                 <div class="header-text">
-                    <h1>Stock Research Assistant</h1>
+                    <h1>Cortex D Agent</h1>
                     <span class="status initializing">Initializing...</span>
                 </div>
             </div>
@@ -71,13 +72,8 @@
             <!-- Welcome message -->
             <div class="message assistant-message">
                 <div class="message-content">
-                    <p>👋 Hello! I'm your Stock Research Assistant. How can I help you today?</p>
-                    <p class="suggestion">Try asking about:</p>
-                    <div class="suggestions">
-                        <button class="suggestion-btn">"Income growth for Narayana Hrudayalaya"</button>
-                        <button class="suggestion-btn">"Market trends Rainbow Hospitals"</button>
-                        <button class="suggestion-btn">"Growth trends in healthcare sector in India"</button>
-                    </div>
+                    <p>👋 Hello! I'm Cortex D Agent.<br>
+                    Please wait while the server is initializing...</p>
                 </div>
                 <div class="timestamp">Now</div>
             </div>
@@ -86,9 +82,8 @@
         <div class="input-container">
             <div class="input-wrapper">
                 <textarea id="userInput" 
-                         placeholder="Ask about any stock or market trend..."
-                         rows="1"
-                         autofocus></textarea>
+                         placeholder="Type your question here..."
+                         rows="1"></textarea>
                 <button id="sendButton" class="send-button">
                     <span class="material-icons">send</span>
                 </button>

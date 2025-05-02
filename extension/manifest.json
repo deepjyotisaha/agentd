@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Stock Research Assistant",
+    "name": "Cortex D Agent",
     "version": "1.0",
-    "description": "AI-powered stock research assistant",
+    "description": "AI-powered agent assistant",
     "permissions": [
       "sidePanel",
       "activeTab"

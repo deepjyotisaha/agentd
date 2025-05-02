@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+    new StockResearchAssistant();
+});
+
 class StockResearchAssistant {
     constructor() {
         this.chatContainer = document.getElementById('chatContainer');
@@ -6,6 +10,12 @@ class StockResearchAssistant {
         this.typingIndicator = document.querySelector('.typing-indicator');
         this.statusIndicator = document.querySelector('.status');
         this.backendUrl = 'http://localhost:5000';
+        this.agentReadyAnnounced = false;
+        this.offlineAnnounced = false;
+        
+        // Set the initial message
+        this.chatContainer.innerHTML = '';
+        this.addMessage("👋 Hello! I'm Cortex D Agent.<br>Please wait while the server is initializing...", 'assistant');
         
         this.setupEventListeners();
         this.setupSuggestions();
@@ -43,31 +53,49 @@ class StockResearchAssistant {
         try {
             const response = await fetch(`${this.backendUrl}/status`);
             if (!response.ok) {
-                this.statusIndicator.textContent = 'Initializing...';
-                this.statusIndicator.className = 'status initializing';
-                this.disableInput();
-                setTimeout(() => this.checkServerStatus(), 5000);
+                this.setInitializing();
                 return;
             }
             const data = await response.json();
             if (data.status === 'ready') {
-                this.statusIndicator.textContent = 'Online';
-                this.statusIndicator.className = 'status online';
-                this.enableInput();
-                this.addMessage("Agent is ready! Please type your query.", 'assistant');
+                this.setOnline();
             } else {
-                this.statusIndicator.textContent = 'Initializing...';
-                this.statusIndicator.className = 'status initializing';
-                this.disableInput();
-                setTimeout(() => this.checkServerStatus(), 5000);
+                this.setInitializing();
             }
         } catch (error) {
-            this.statusIndicator.textContent = 'Offline';
-            this.statusIndicator.className = 'status offline';
-            this.addMessage('Unable to connect to the server. Please try again later.', 'assistant');
-            this.disableInput();
-            setTimeout(() => this.checkServerStatus(), 10000);
+            this.setOffline();
         }
+    }
+
+    setInitializing() {
+        this.statusIndicator.textContent = 'Initializing...';
+        this.statusIndicator.className = 'status initializing';
+        this.disableInput();
+        this.offlineAnnounced = false;
+        setTimeout(() => this.checkServerStatus(), 5000);
+    }
+
+    setOnline() {
+        this.statusIndicator.textContent = 'Online';
+        this.statusIndicator.className = 'status online';
+        this.enableInput();
+        this.offlineAnnounced = false;
+        if (!this.agentReadyAnnounced) {
+            this.chatContainer.innerHTML = '';
+            this.addMessage("Agent is ready! Please type your query.", 'assistant');
+            this.agentReadyAnnounced = true;
+        }
+    }
+
+    setOffline() {
+        this.statusIndicator.textContent = 'Offline';
+        this.statusIndicator.className = 'status offline';
+        this.disableInput();
+        if (!this.offlineAnnounced) {
+            this.addMessage('Unable to connect to the server. Please try again later.', 'assistant');
+            this.offlineAnnounced = true;
+        }
+        setTimeout(() => this.checkServerStatus(), 10000);
     }
 
     enableInput() {
@@ -99,41 +127,24 @@ class StockResearchAssistant {
         this.showTypingIndicator();
 
         try {
-            const eventSource = new EventSource(`${this.backendUrl}/query?message=${encodeURIComponent(message)}`);
-            
-            eventSource.onmessage = (event) => {
-                const data = JSON.parse(event.data);
-                
-                if (data.type === 'update' || data.type === 'final') {
+            const response = await fetch(`${this.backendUrl}/query?message=${encodeURIComponent(message)}`);
+            if (!response.ok) {
+                throw new Error('Server error');
+            }
+            const data = await response.json();
                     this.hideTypingIndicator();
                     
-                    // Create a temporary div to check if content is HTML
-                    const temp = document.createElement('div');
-                    temp.innerHTML = data.content;
-                    
-                    // Add the message
+            if (data.type === 'final') {
                     this.addMessage(data.content, 'assistant');
-                    
-                    if (data.type === 'final') {
                         setTimeout(() => {
                             this.addMessage("What else would you like to know?", 'assistant');
                         }, 500);
-                        eventSource.close();
                         this.enableInput();
-                    }
-                }
-            };
-
-            eventSource.onerror = (error) => {
-                console.error('EventSource failed:', error);
-                this.hideTypingIndicator();
+            } else if (data.error) {
                 this.addMessage('Sorry, there was an error processing your request.', 'assistant');
-                eventSource.close();
                 this.enableInput();
-            };
-
+            }
         } catch (error) {
-            console.error('Error:', error);
             this.hideTypingIndicator();
             this.addMessage('Sorry, there was an error processing your request.', 'assistant');
             this.enableInput();
@@ -147,53 +158,43 @@ class StockResearchAssistant {
         const messageContent = document.createElement('div');
         messageContent.className = 'message-content';
         
-        // Check if the content contains HTML tags
-        if (content.includes('<div') || content.includes('<style')) {
-            // If it's HTML content, insert it directly
+        if (type === 'assistant') {
+            // Allow HTML for assistant messages (so <br> and emoji work)
             messageContent.innerHTML = content;
         } else {
-            // If it's plain text, escape it
+            // Escape HTML for user messages
             messageContent.innerHTML = `<p>${this.escapeHtml(content)}</p>`;
         }
-        
+
         const timestamp = document.createElement('div');
         timestamp.className = 'timestamp';
         timestamp.textContent = this.getTimestamp();
-        
+
         messageDiv.appendChild(messageContent);
         messageDiv.appendChild(timestamp);
-        
+
         this.chatContainer.appendChild(messageDiv);
         this.scrollToBottom();
     }
 
-    showTypingIndicator() {
-        this.typingIndicator.style.display = 'flex';
-        this.scrollToBottom();
+    escapeHtml(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
     }
 
-    hideTypingIndicator() {
-        this.typingIndicator.style.display = 'none';
+    getTimestamp() {
+        const now = new Date();
+        return now.toLocaleTimeString();
     }
 
     scrollToBottom() {
         this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
     }
 
-    getTimestamp() {
-        return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    showTypingIndicator() {
+        this.typingIndicator.style.display = 'block';
     }
 
-    escapeHtml(unsafe) {
-        return unsafe
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
+    hideTypingIndicator() {
+        this.typingIndicator.style.display = 'none';
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    new StockResearchAssistant();
-});

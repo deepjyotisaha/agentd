@@ -56,13 +56,13 @@ mcp_servers:
     retry_attempts: 3
     timeout: 30
 
-interaction_channel: telegram
+interaction_channel: chrome
 
 channels:
   - type: telegram
     sse_url: http://localhost:8002
-#  - type: chrome
-#    url: http://localhost:5000
+  - type: chrome
+    url: http://localhost:5000
 
 
 

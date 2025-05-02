@@ -1,119 +1,101 @@
-2025-05-02 21:33:11,665 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8001/sse
-2025-05-02 21:33:12,440 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8001/sse "HTTP/1.1 200 OK"
-2025-05-02 21:33:12,441 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8001/messages/?session_id=5a061eff3b0c4fa1ace4117845f3baac
-2025-05-02 21:33:12,441 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8001/messages/?session_id=5a061eff3b0c4fa1ace4117845f3baac
-2025-05-02 21:33:12,705 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=5a061eff3b0c4fa1ace4117845f3baac "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:12,709 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=5a061eff3b0c4fa1ace4117845f3baac "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:12,712 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=5a061eff3b0c4fa1ace4117845f3baac "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:12,716 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:33:13,580 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:33:13,581 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=a9984217ac7c4529a4c7f33a567966c0
-2025-05-02 21:33:13,582 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=a9984217ac7c4529a4c7f33a567966c0
-2025-05-02 21:33:13,842 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=a9984217ac7c4529a4c7f33a567966c0 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:13,846 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=a9984217ac7c4529a4c7f33a567966c0 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:13,848 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=a9984217ac7c4529a4c7f33a567966c0 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:13,851 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8003/sse
-2025-05-02 21:33:14,701 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8003/sse "HTTP/1.1 200 OK"
-2025-05-02 21:33:14,702 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8003/messages/?session_id=906b23a7a699483ba4710183793f8731
-2025-05-02 21:33:14,704 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8003/messages/?session_id=906b23a7a699483ba4710183793f8731
-2025-05-02 21:33:14,962 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8003/messages/?session_id=906b23a7a699483ba4710183793f8731 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:14,967 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8003/messages/?session_id=906b23a7a699483ba4710183793f8731 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:14,973 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8003/messages/?session_id=906b23a7a699483ba4710183793f8731 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:14,975 - INFO - session:initialize:168 - === All Tool Details ===
-2025-05-02 21:33:14,976 - INFO - session:initialize:171 - Name: add
-2025-05-02 21:33:14,976 - INFO - session:initialize:172 - Description: Add two numbers. Usage: add|input={"a": 10, "b": 5}
-2025-05-02 21:33:14,976 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,977 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,977 - INFO - session:initialize:171 - Name: sqrt
-2025-05-02 21:33:14,977 - INFO - session:initialize:172 - Description: Compute the square root of a number. Usage: sqrt|input={"a": 49}
-2025-05-02 21:33:14,978 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,978 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,978 - INFO - session:initialize:171 - Name: subtract
-2025-05-02 21:33:14,979 - INFO - session:initialize:172 - Description: Subtract one number from another. Usage: subtract|a=10|b=3
-2025-05-02 21:33:14,979 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,979 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,980 - INFO - session:initialize:171 - Name: multiply
-2025-05-02 21:33:14,980 - INFO - session:initialize:172 - Description: Multiply two integers. Usage: multiply|a=6|b=7
-2025-05-02 21:33:14,981 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,981 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,981 - INFO - session:initialize:171 - Name: divide
-2025-05-02 21:33:14,982 - INFO - session:initialize:172 - Description: Divide one number by another. Usage: divide|a=20|b=4
-2025-05-02 21:33:14,982 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,982 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,982 - INFO - session:initialize:171 - Name: power
-2025-05-02 21:33:14,983 - INFO - session:initialize:172 - Description: Compute a raised to the power of b. Usage: power|a=2|b=10
-2025-05-02 21:33:14,983 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,983 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,984 - INFO - session:initialize:171 - Name: cbrt
-2025-05-02 21:33:14,984 - INFO - session:initialize:172 - Description: Compute the cube root of a number. Usage: cbrt|a=27
-2025-05-02 21:33:14,984 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,985 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,985 - INFO - session:initialize:171 - Name: factorial
-2025-05-02 21:33:14,985 - INFO - session:initialize:172 - Description: Compute the factorial of a number. Usage: factorial|a=5
-2025-05-02 21:33:14,985 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,986 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,986 - INFO - session:initialize:171 - Name: remainder
-2025-05-02 21:33:14,986 - INFO - session:initialize:172 - Description: Compute the remainder of a divided by b. Usage: remainder|a=17|b=4
-2025-05-02 21:33:14,986 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,986 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,987 - INFO - session:initialize:171 - Name: sin
-2025-05-02 21:33:14,987 - INFO - session:initialize:172 - Description: Compute sine of an angle in radians. Usage: sin|a=1
-2025-05-02 21:33:14,987 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,987 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,987 - INFO - session:initialize:171 - Name: cos
-2025-05-02 21:33:14,987 - INFO - session:initialize:172 - Description: Compute cosine of an angle in radians. Usage: cos|a=1
-2025-05-02 21:33:14,988 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,988 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,988 - INFO - session:initialize:171 - Name: tan
-2025-05-02 21:33:14,989 - INFO - session:initialize:172 - Description: Compute tangent of an angle in radians. Usage: tan|a=1
-2025-05-02 21:33:14,989 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,990 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,990 - INFO - session:initialize:171 - Name: mine
-2025-05-02 21:33:14,991 - INFO - session:initialize:172 - Description: special mining tool
-2025-05-02 21:33:14,991 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,991 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,991 - INFO - session:initialize:171 - Name: create_thumbnail
-2025-05-02 21:33:14,992 - INFO - session:initialize:172 - Description: Create a 100x100 thumbnail from image. Usage: create_thumbnail|image_path="example.jpg"
-2025-05-02 21:33:14,992 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,992 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,992 - INFO - session:initialize:171 - Name: strings_to_chars_to_int
-2025-05-02 21:33:14,992 - INFO - session:initialize:172 - Description: Convert characters to ASCII values. Usage: strings_to_chars_to_int|input={"string": "INDIA"}
-2025-05-02 21:33:14,993 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,993 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,993 - INFO - session:initialize:171 - Name: int_list_to_exponential_sum
-2025-05-02 21:33:14,993 - INFO - session:initialize:172 - Description: Sum exponentials of int list. Usage: int_list_to_exponential_sum|input={"numbers": [65, 66, 67]}
-2025-05-02 21:33:14,993 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,994 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,994 - INFO - session:initialize:171 - Name: fibonacci_numbers
-2025-05-02 21:33:14,994 - INFO - session:initialize:172 - Description: Generate first n Fibonacci numbers. Usage: fibonacci_numbers|n=10
-2025-05-02 21:33:14,994 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,994 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,995 - INFO - session:initialize:171 - Name: run_python_sandbox
-2025-05-02 21:33:14,995 - INFO - session:initialize:172 - Description: Run math code in Python sandbox. Usage: run_python_sandbox|input={"code": "result = math.sqrt(49)"}
-2025-05-02 21:33:14,995 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,995 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,995 - INFO - session:initialize:171 - Name: run_shell_command
-2025-05-02 21:33:14,996 - INFO - session:initialize:172 - Description: Run a safe shell command. Usage: run_shell_command|input={"command": "ls"}
-2025-05-02 21:33:14,996 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,996 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,996 - INFO - session:initialize:171 - Name: run_sql_query
-2025-05-02 21:33:14,996 - INFO - session:initialize:172 - Description: Run safe SELECT-only SQL query. Usage: run_sql_query|input={"code": "SELECT * FROM users LIMIT 5"}
-2025-05-02 21:33:14,996 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,997 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,997 - INFO - session:initialize:171 - Name: search_documents
-2025-05-02 21:33:14,997 - INFO - session:initialize:172 - Description: Search indexed documents for relevant content. Usage: search_documents|query="india Current GDP" 
-2025-05-02 21:33:14,997 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,997 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,998 - INFO - session:initialize:171 - Name: extract_webpage
-2025-05-02 21:33:14,998 - INFO - session:initialize:172 - Description: Extract and convert webpage content to markdown. Usage: extract_webpage|input={"url": "https://example.com"}
-2025-05-02 21:33:14,998 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,998 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,998 - INFO - session:initialize:171 - Name: extract_pdf
-2025-05-02 21:33:14,999 - INFO - session:initialize:172 - Description: Convert PDF file content to markdown format. Usage: extract_pdf|input={"file_path": "documents/dlf.pdf"}
-2025-05-02 21:33:14,999 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:14,999 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:14,999 - INFO - session:initialize:171 - Name: search
-2025-05-02 21:33:15,000 - INFO - session:initialize:172 - Description: 
+2025-05-03 00:59:07,837 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8001/sse
+2025-05-03 00:59:10,474 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
+2025-05-03 00:59:13,173 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8003/sse
+2025-05-03 00:59:15,812 - INFO - session:initialize:168 - === All Tool Details ===
+2025-05-03 00:59:15,812 - INFO - session:initialize:171 - Name: add
+2025-05-03 00:59:15,813 - INFO - session:initialize:172 - Description: Add two numbers. Usage: add|input={"a": 10, "b": 5}
+2025-05-03 00:59:15,813 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,813 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,814 - INFO - session:initialize:171 - Name: sqrt
+2025-05-03 00:59:15,814 - INFO - session:initialize:172 - Description: Compute the square root of a number. Usage: sqrt|input={"a": 49}
+2025-05-03 00:59:15,814 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,814 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,814 - INFO - session:initialize:171 - Name: subtract
+2025-05-03 00:59:15,816 - INFO - session:initialize:172 - Description: Subtract one number from another. Usage: subtract|a=10|b=3
+2025-05-03 00:59:15,816 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,816 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,817 - INFO - session:initialize:171 - Name: multiply
+2025-05-03 00:59:15,817 - INFO - session:initialize:172 - Description: Multiply two integers. Usage: multiply|a=6|b=7
+2025-05-03 00:59:15,817 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,817 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,817 - INFO - session:initialize:171 - Name: divide
+2025-05-03 00:59:15,817 - INFO - session:initialize:172 - Description: Divide one number by another. Usage: divide|a=20|b=4
+2025-05-03 00:59:15,818 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,818 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,818 - INFO - session:initialize:171 - Name: power
+2025-05-03 00:59:15,818 - INFO - session:initialize:172 - Description: Compute a raised to the power of b. Usage: power|a=2|b=10
+2025-05-03 00:59:15,819 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,819 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,819 - INFO - session:initialize:171 - Name: cbrt
+2025-05-03 00:59:15,819 - INFO - session:initialize:172 - Description: Compute the cube root of a number. Usage: cbrt|a=27
+2025-05-03 00:59:15,819 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,819 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,819 - INFO - session:initialize:171 - Name: factorial
+2025-05-03 00:59:15,820 - INFO - session:initialize:172 - Description: Compute the factorial of a number. Usage: factorial|a=5
+2025-05-03 00:59:15,820 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,820 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,820 - INFO - session:initialize:171 - Name: remainder
+2025-05-03 00:59:15,820 - INFO - session:initialize:172 - Description: Compute the remainder of a divided by b. Usage: remainder|a=17|b=4
+2025-05-03 00:59:15,820 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,822 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,822 - INFO - session:initialize:171 - Name: sin
+2025-05-03 00:59:15,822 - INFO - session:initialize:172 - Description: Compute sine of an angle in radians. Usage: sin|a=1
+2025-05-03 00:59:15,822 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,823 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,823 - INFO - session:initialize:171 - Name: cos
+2025-05-03 00:59:15,823 - INFO - session:initialize:172 - Description: Compute cosine of an angle in radians. Usage: cos|a=1
+2025-05-03 00:59:15,824 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,824 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,824 - INFO - session:initialize:171 - Name: tan
+2025-05-03 00:59:15,825 - INFO - session:initialize:172 - Description: Compute tangent of an angle in radians. Usage: tan|a=1
+2025-05-03 00:59:15,825 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,825 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,825 - INFO - session:initialize:171 - Name: mine
+2025-05-03 00:59:15,825 - INFO - session:initialize:172 - Description: special mining tool
+2025-05-03 00:59:15,827 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,827 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,827 - INFO - session:initialize:171 - Name: create_thumbnail
+2025-05-03 00:59:15,827 - INFO - session:initialize:172 - Description: Create a 100x100 thumbnail from image. Usage: create_thumbnail|image_path="example.jpg"
+2025-05-03 00:59:15,827 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,828 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,828 - INFO - session:initialize:171 - Name: strings_to_chars_to_int
+2025-05-03 00:59:15,828 - INFO - session:initialize:172 - Description: Convert characters to ASCII values. Usage: strings_to_chars_to_int|input={"string": "INDIA"}
+2025-05-03 00:59:15,829 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,829 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,830 - INFO - session:initialize:171 - Name: int_list_to_exponential_sum
+2025-05-03 00:59:15,830 - INFO - session:initialize:172 - Description: Sum exponentials of int list. Usage: int_list_to_exponential_sum|input={"numbers": [65, 66, 67]}
+2025-05-03 00:59:15,830 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,830 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,832 - INFO - session:initialize:171 - Name: fibonacci_numbers
+2025-05-03 00:59:15,832 - INFO - session:initialize:172 - Description: Generate first n Fibonacci numbers. Usage: fibonacci_numbers|n=10
+2025-05-03 00:59:15,832 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,832 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,833 - INFO - session:initialize:171 - Name: run_python_sandbox
+2025-05-03 00:59:15,833 - INFO - session:initialize:172 - Description: Run math code in Python sandbox. Usage: run_python_sandbox|input={"code": "result = math.sqrt(49)"}
+2025-05-03 00:59:15,834 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,834 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,835 - INFO - session:initialize:171 - Name: run_shell_command
+2025-05-03 00:59:15,835 - INFO - session:initialize:172 - Description: Run a safe shell command. Usage: run_shell_command|input={"command": "ls"}
+2025-05-03 00:59:15,835 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,835 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,835 - INFO - session:initialize:171 - Name: run_sql_query
+2025-05-03 00:59:15,835 - INFO - session:initialize:172 - Description: Run safe SELECT-only SQL query. Usage: run_sql_query|input={"code": "SELECT * FROM users LIMIT 5"}
+2025-05-03 00:59:15,836 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,836 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,836 - INFO - session:initialize:171 - Name: search_documents
+2025-05-03 00:59:15,837 - INFO - session:initialize:172 - Description: Search indexed documents for relevant content. Usage: search_documents|query="india Current GDP" 
+2025-05-03 00:59:15,837 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,837 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,837 - INFO - session:initialize:171 - Name: extract_webpage
+2025-05-03 00:59:15,839 - INFO - session:initialize:172 - Description: Extract and convert webpage content to markdown. Usage: extract_webpage|input={"url": "https://example.com"}
+2025-05-03 00:59:15,839 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,839 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,839 - INFO - session:initialize:171 - Name: extract_pdf
+2025-05-03 00:59:15,840 - INFO - session:initialize:172 - Description: Convert PDF file content to markdown format. Usage: extract_pdf|input={"file_path": "documents/dlf.pdf"}
+2025-05-03 00:59:15,840 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,840 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,840 - INFO - session:initialize:171 - Name: search
+2025-05-03 00:59:15,841 - INFO - session:initialize:172 - Description: 
     Search DuckDuckGo and return formatted results. DuckDuckGo is a search engine that is used to search the web for information.
 
     Args:
@@ -121,373 +103,15 @@
         max_results: Maximum number of results to return (default: 10)
         ctx: MCP context for logging
     
-2025-05-02 21:33:15,000 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,000 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,001 - INFO - session:initialize:171 - Name: fetch_content
-2025-05-02 21:33:15,001 - INFO - session:initialize:172 - Description: 
+2025-05-03 00:59:15,841 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,841 - INFO - session:initialize:174 - ----------------------------------------
+2025-05-03 00:59:15,842 - INFO - session:initialize:171 - Name: fetch_content
+2025-05-03 00:59:15,842 - INFO - session:initialize:172 - Description: 
     Fetch and parse content from a webpage URL.
 
     Args:
         url: The webpage URL to fetch content from
         ctx: MCP context for logging
     
-2025-05-02 21:33:15,001 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,002 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,002 - INFO - session:initialize:171 - Name: send-email
-2025-05-02 21:33:15,002 - INFO - session:initialize:172 - Description: 
-    Sends email to recipient.
-    Do not use if user only asked to draft email.
-    Drafts must be approved before sending.
-    Usage: send-email|recipient_id="someone@example.com"|subject="Hello"|message="Body text"
-    
-2025-05-02 21:33:15,002 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,003 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,003 - INFO - session:initialize:171 - Name: get-unread-emails
-2025-05-02 21:33:15,003 - INFO - session:initialize:172 - Description: 
-    Retrieve unread emails.
-    Usage: get-unread-emails
-    
-2025-05-02 21:33:15,003 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,003 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,004 - INFO - session:initialize:171 - Name: read-email
-2025-05-02 21:33:15,004 - INFO - session:initialize:172 - Description: 
-    Retrieves given email content.
-    Usage: read-email|email_id="abc123"
-    
-2025-05-02 21:33:15,004 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,004 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,004 - INFO - session:initialize:171 - Name: trash-email
-2025-05-02 21:33:15,005 - INFO - session:initialize:172 - Description: 
-    Moves email to trash. Confirm before moving email to trash.
-    Usage: trash-email|email_id="abc123"
-    
-2025-05-02 21:33:15,005 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,005 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,005 - INFO - session:initialize:171 - Name: mark-email-as-read
-2025-05-02 21:33:15,006 - INFO - session:initialize:172 - Description: 
-    Marks given email as read.
-    Usage: mark-email-as-read|email_id="abc123"
-    
-2025-05-02 21:33:15,006 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,006 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,006 - INFO - session:initialize:171 - Name: open-email
-2025-05-02 21:33:15,007 - INFO - session:initialize:172 - Description: 
-    Open email in browser.
-    Usage: open-email|email_id="abc123"
-    
-2025-05-02 21:33:15,007 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,008 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,008 - INFO - session:initialize:171 - Name: send-telegram-message
-2025-05-02 21:33:15,008 - INFO - session:initialize:172 - Description: 
-    Send a message to the Telegram bot's chat.
-
-    Arguments:
-        text (str): The message to send.
-
-    Usage:
-        send-telegram-message|text="Hello from the agent!"
-
-    Returns:
-        str: Confirmation message with details of the sent message
-    
-2025-05-02 21:33:15,008 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,008 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,009 - INFO - session:initialize:171 - Name: get-next-telegram-message
-2025-05-02 21:33:15,009 - INFO - session:initialize:172 - Description: 
-    Fetch the next pending Telegram message.
-
-    Usage:
-        get-next-telegram-message
-
-    Returns:
-        dict: {"user_id": int, "text": str}
-    
-2025-05-02 21:33:15,009 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,009 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,009 - INFO - session:initialize:171 - Name: search-files
-2025-05-02 21:33:15,010 - INFO - session:initialize:172 - Description: 
-    Search for files in Google Drive using Google Drive API query syntax.
-    
-    Common query patterns:
-    1. Search by file type:
-       - For Spreadsheets: query="mimeType='application/vnd.google-apps.spreadsheet'"
-       - For Docs: query="mimeType='application/vnd.google-apps.document'"
-       
-    2. Search by name:
-       - Exact match: query="name='example.txt'"
-       - Contains: query="name contains 'example'"
-       
-    3. Search by modification time:
-       - Recent files: query="modifiedTime > '2024-01-01T00:00:00'"
-       
-    4. Combined searches:
-       - Recent spreadsheets: query="mimeType='application/vnd.google-apps.spreadsheet' and modifiedTime > '2024-01-01T00:00:00'"
-       - Named docs: query="mimeType='application/vnd.google-apps.document' and name contains 'Report'"
-       
-    5. Owner-based search:
-       - Files owned by you: query="'me' in owners"
-       
-    Usage examples:
-    - search-files|query="mimeType='application/vnd.google-apps.spreadsheet' and name contains 'F1 Standings'"
-    - search-files|query="mimeType='application/vnd.google-apps.document' or mimeType='application/vnd.google-apps.spreadsheet'"
-    - search-files|query="name contains 'Project' and modifiedTime > '2024-01-01T00:00:00'"
-    
-2025-05-02 21:33:15,010 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,011 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,011 - INFO - session:initialize:171 - Name: create-spreadsheet
-2025-05-02 21:33:15,011 - INFO - session:initialize:172 - Description: 
-    Create a new Google Spreadsheet and return the spreadsheet ID and URL.
-    Usage: create-spreadsheet|title="My Spreadsheet"|initial_data=[["Header1", "Header2"], ["Value1", "Value2"]]
-    
-2025-05-02 21:33:15,011 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,011 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,012 - INFO - session:initialize:171 - Name: create-document
-2025-05-02 21:33:15,012 - INFO - session:initialize:172 - Description: 
-    Create a new Google Doc.
-    Usage: create-document|title="My Document"|content="Initial content"
-    
-2025-05-02 21:33:15,012 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,012 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,012 - INFO - session:initialize:171 - Name: read-spreadsheet
-2025-05-02 21:33:15,013 - INFO - session:initialize:172 - Description: 
-    Read content from an existing Google Spreadsheet.
-    Usage: read-spreadsheet|spreadsheet_id="1234..."|range_name="Sheet1!A1:B10"
-    
-2025-05-02 21:33:15,013 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,013 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,013 - INFO - session:initialize:171 - Name: read-document
-2025-05-02 21:33:15,013 - INFO - session:initialize:172 - Description: 
-    Read content from a Google Doc.
-    Usage: read-document|document_id="1234..."
-    
-2025-05-02 21:33:15,014 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,014 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,014 - INFO - session:initialize:171 - Name: update-spreadsheet
-2025-05-02 21:33:15,014 - INFO - session:initialize:172 - Description: 
-    Update content in an existing Google Spreadsheet.
-    Usage: update-spreadsheet|spreadsheet_id="1234..."|range_name="Sheet1!A1"|values=[["New", "Values"]]
-    
-2025-05-02 21:33:15,014 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,014 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,015 - INFO - session:initialize:171 - Name: update-document
-2025-05-02 21:33:15,015 - INFO - session:initialize:172 - Description: 
-    Update content in a Google Doc.
-    Usage: update-document|document_id="1234..."|content="New content"
-    
-2025-05-02 21:33:15,015 - INFO - session:initialize:173 - Schema: No schema
-2025-05-02 21:33:15,015 - INFO - session:initialize:174 - ----------------------------------------
-2025-05-02 21:33:15,016 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:33:15,815 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:33:15,816 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=c9f9d4b5089d487094b25b906651b062
-2025-05-02 21:33:15,816 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=c9f9d4b5089d487094b25b906651b062
-2025-05-02 21:33:16,081 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=c9f9d4b5089d487094b25b906651b062 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:16,085 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=c9f9d4b5089d487094b25b906651b062 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:16,087 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=c9f9d4b5089d487094b25b906651b062 "HTTP/1.1 202 Accepted"
-2025-05-02 21:33:31,347 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:33:32,415 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:33:32,417 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:33:32,418 - INFO - perception:extract_perception:51 - Perception response: {"intent": "get F1 standings", "entities": ["F1", "standings"], "tool_hint": "Formula1"}
-2025-05-02 21:33:32,418 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "get F1 standings", "entities": ["F1", "standings"], "tool_hint": "Formula1"}
-2025-05-02 21:33:32,419 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "get F1 standings", "entities": ["F1", "standings"], "tool_hint": "Formula1"}
-2025-05-02 21:33:32,627 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:33:34,929 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:33:34,930 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:33:35,134 - INFO - action:log:20 - [21:33:35] [parser] Parsed: search → {'query': 'F1 standings'}
-2025-05-02 21:33:44,339 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:33:45,468 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:33:45,470 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:33:45,471 - INFO - perception:extract_perception:51 - Perception response: {"intent": "Get F1 standings", "entities": ["F1 standings"], "tool_hint": "browser", "user_input": "Original user task: Tell me F1 standings in a nice format"}
-2025-05-02 21:33:45,471 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "Get F1 standings", "entities": ["F1 standings"], "tool_hint": "browser", "user_input": "Original user task: Tell me F1 standings in a nice format"}
-2025-05-02 21:33:45,472 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "Get F1 standings", "entities": ["F1 standings"], "tool_hint": "browser", "user_input": "Original user task: Tell me F1 standings in a nice format"}
-2025-05-02 21:33:49,740 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:33:51,604 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:33:51,609 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:33:51,824 - INFO - action:log:20 - [21:33:51] [parser] Parsed: extract_webpage → {'input': {'url': 'https://www.formula1.com/en/results/driver-standings'}}
-2025-05-02 21:34:11,375 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:34:12,707 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:34:12,710 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:34:12,711 - INFO - perception:extract_perception:51 - Perception response: {"intent": "Get F1 standings in markdown format", "entities": ["F1 standings", "markdown"], "tool_hint": null, "user_input": "Original user task: Tell me F1 standings in a nice format"}
-2025-05-02 21:34:12,711 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "Get F1 standings in markdown format", "entities": ["F1 standings", "markdown"], "tool_hint": null, "user_input": "Original user task: Tell me F1 standings in a nice format"}
-2025-05-02 21:34:12,712 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "Get F1 standings in markdown format", "entities": ["F1 standings", "markdown"], "tool_hint": null, "user_input": "Original user task: Tell me F1 standings in a nice format"}
-2025-05-02 21:34:16,299 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:34:19,387 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:34:19,388 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:34:19,591 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:34:20,450 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:34:20,451 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=ca3d1d269ec7456789b7240d981a6dc5
-2025-05-02 21:34:20,451 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=ca3d1d269ec7456789b7240d981a6dc5
-2025-05-02 21:34:20,714 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=ca3d1d269ec7456789b7240d981a6dc5 "HTTP/1.1 202 Accepted"
-2025-05-02 21:34:20,717 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=ca3d1d269ec7456789b7240d981a6dc5 "HTTP/1.1 202 Accepted"
-2025-05-02 21:34:20,720 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=ca3d1d269ec7456789b7240d981a6dc5 "HTTP/1.1 202 Accepted"
-2025-05-02 21:34:22,480 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:34:23,329 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:34:23,330 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=9e1428bcec8149a287fefc0f1ec864ea
-2025-05-02 21:34:23,330 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=9e1428bcec8149a287fefc0f1ec864ea
-2025-05-02 21:34:23,599 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=9e1428bcec8149a287fefc0f1ec864ea "HTTP/1.1 202 Accepted"
-2025-05-02 21:34:23,602 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=9e1428bcec8149a287fefc0f1ec864ea "HTTP/1.1 202 Accepted"
-2025-05-02 21:34:23,605 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=9e1428bcec8149a287fefc0f1ec864ea "HTTP/1.1 202 Accepted"
-2025-05-02 21:34:40,127 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:34:42,419 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:34:42,421 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:34:42,421 - INFO - perception:extract_perception:51 - Perception response: {"intent": "biographical information retrieval", "entities": ["Donal Trump"], "tool_hint": "None", "user_input": "Who is Donal trump"}
-2025-05-02 21:34:42,421 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "biographical information retrieval", "entities": ["Donal Trump"], "tool_hint": "None", "user_input": "Who is Donal trump"}
-2025-05-02 21:34:42,422 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "biographical information retrieval", "entities": ["Donal Trump"], "tool_hint": "None", "user_input": "Who is Donal trump"}
-2025-05-02 21:34:42,635 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:34:43,652 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:34:43,656 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:34:43,861 - INFO - action:log:20 - [21:34:43] [parser] Parsed: search → {'query': 'Who is Donald Trump'}
-2025-05-02 21:34:56,014 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:34:57,153 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:34:57,155 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:34:57,155 - INFO - perception:extract_perception:51 - Perception response: {"intent": "Find information about Donald Trump", "entities": ["Donald Trump"], "tool_hint": null, "user_input": "Who is Donal trump"}
-2025-05-02 21:34:57,156 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "Find information about Donald Trump", "entities": ["Donald Trump"], "tool_hint": null, "user_input": "Who is Donal trump"}
-2025-05-02 21:34:57,156 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "Find information about Donald Trump", "entities": ["Donald Trump"], "tool_hint": null, "user_input": "Who is Donal trump"}
-2025-05-02 21:35:01,812 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:35:03,527 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:35:03,528 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:35:03,742 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:35:04,508 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:35:04,509 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=95bcee66dcec4f73ace1b7fd7cf8d258
-2025-05-02 21:35:04,510 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=95bcee66dcec4f73ace1b7fd7cf8d258
-2025-05-02 21:35:04,775 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=95bcee66dcec4f73ace1b7fd7cf8d258 "HTTP/1.1 202 Accepted"
-2025-05-02 21:35:04,778 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=95bcee66dcec4f73ace1b7fd7cf8d258 "HTTP/1.1 202 Accepted"
-2025-05-02 21:35:04,781 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=95bcee66dcec4f73ace1b7fd7cf8d258 "HTTP/1.1 202 Accepted"
-2025-05-02 21:35:06,472 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:35:07,237 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:35:07,238 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=1cf901af89f54e69b311ff82d0eecdc6
-2025-05-02 21:35:07,239 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=1cf901af89f54e69b311ff82d0eecdc6
-2025-05-02 21:35:07,502 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=1cf901af89f54e69b311ff82d0eecdc6 "HTTP/1.1 202 Accepted"
-2025-05-02 21:35:07,506 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=1cf901af89f54e69b311ff82d0eecdc6 "HTTP/1.1 202 Accepted"
-2025-05-02 21:35:07,510 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=1cf901af89f54e69b311ff82d0eecdc6 "HTTP/1.1 202 Accepted"
-2025-05-02 21:35:45,551 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:35:47,057 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:35:47,058 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:35:47,059 - INFO - perception:extract_perception:51 - Perception response: {"intent": "find reasons for constant hunger", "entities": ["always hungry"], "tool_hint": "Medical knowledge base", "user_input": "Why am I always hungry"}
-2025-05-02 21:35:47,059 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "find reasons for constant hunger", "entities": ["always hungry"], "tool_hint": "Medical knowledge base", "user_input": "Why am I always hungry"}
-2025-05-02 21:35:47,059 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "find reasons for constant hunger", "entities": ["always hungry"], "tool_hint": "Medical knowledge base", "user_input": "Why am I always hungry"}
-2025-05-02 21:35:47,273 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:35:49,469 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:35:49,470 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:35:49,673 - INFO - action:log:20 - [21:35:49] [parser] Parsed: search → {'query': 'causes of constant hunger'}
-2025-05-02 21:36:01,519 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:36:03,746 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:36:03,748 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:36:03,748 - INFO - perception:extract_perception:51 - Perception response: {"intent": "reasons for constant hunger", "entities": ["constant hunger", "polyphagia", "hyperphagia"], "tool_hint": None, "user_input": "Why am I always hungry"}
-2025-05-02 21:36:03,748 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "reasons for constant hunger", "entities": ["constant hunger", "polyphagia", "hyperphagia"], "tool_hint": None, "user_input": "Why am I always hungry"}
-2025-05-02 21:36:03,748 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "reasons for constant hunger", "entities": ["constant hunger", "polyphagia", "hyperphagia"], "tool_hint": None, "user_input": "Why am I always hungry"}
-2025-05-02 21:36:08,430 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 21:36:11,495 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 21:36:11,497 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 21:36:11,712 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:36:12,453 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:36:12,454 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=8abb5834fd1748bbaf259c487c91d125
-2025-05-02 21:36:12,455 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=8abb5834fd1748bbaf259c487c91d125
-2025-05-02 21:36:12,715 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=8abb5834fd1748bbaf259c487c91d125 "HTTP/1.1 202 Accepted"
-2025-05-02 21:36:12,719 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=8abb5834fd1748bbaf259c487c91d125 "HTTP/1.1 202 Accepted"
-2025-05-02 21:36:12,722 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=8abb5834fd1748bbaf259c487c91d125 "HTTP/1.1 202 Accepted"
-2025-05-02 21:36:14,290 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 21:36:15,001 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 21:36:15,001 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=54cc1f4fd6424daaa276eff9ddfc1743
-2025-05-02 21:36:15,002 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=54cc1f4fd6424daaa276eff9ddfc1743
-2025-05-02 21:36:15,268 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=54cc1f4fd6424daaa276eff9ddfc1743 "HTTP/1.1 202 Accepted"
-2025-05-02 21:36:15,272 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=54cc1f4fd6424daaa276eff9ddfc1743 "HTTP/1.1 202 Accepted"
-2025-05-02 21:36:15,275 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=54cc1f4fd6424daaa276eff9ddfc1743 "HTTP/1.1 202 Accepted"
-2025-05-02 22:09:22,177 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:09:24,392 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:09:24,394 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:09:24,395 - INFO - perception:extract_perception:51 - Perception response: {"intent": "find payment amount", "entities": ["Anmol Singh", "DFL"], "tool_hint": "payment_tracker", "user_input": "How much money did Anmol Singh paid to DFL"}
-2025-05-02 22:09:24,395 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "find payment amount", "entities": ["Anmol Singh", "DFL"], "tool_hint": "payment_tracker", "user_input": "How much money did Anmol Singh paid to DFL"}
-2025-05-02 22:09:24,395 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "find payment amount", "entities": ["Anmol Singh", "DFL"], "tool_hint": "payment_tracker", "user_input": "How much money did Anmol Singh paid to DFL"}
-2025-05-02 22:09:24,610 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:09:26,829 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:09:26,831 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:09:27,042 - INFO - action:log:20 - [22:09:27] [parser] Parsed: search_documents → {'query': 'Anmol Singh payment to DFL'}
-2025-05-02 22:09:58,968 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:10:00,193 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:10:00,194 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:10:00,195 - INFO - perception:extract_perception:51 - Perception response: {"intent": "find the amount of money Anmol Singh paid to DFL", "entities": ["Anmol Singh", "DFL"], "tool_hint": None, "user_input": "How much money did Anmol Singh paid to DFL"}
-2025-05-02 22:10:00,195 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "find the amount of money Anmol Singh paid to DFL", "entities": ["Anmol Singh", "DFL"], "tool_hint": None, "user_input": "How much money did Anmol Singh paid to DFL"}
-2025-05-02 22:10:00,195 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "find the amount of money Anmol Singh paid to DFL", "entities": ["Anmol Singh", "DFL"], "tool_hint": None, "user_input": "How much money did Anmol Singh paid to DFL"}
-2025-05-02 22:10:10,795 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:10:12,938 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:10:12,939 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:10:13,141 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 22:10:15,876 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 22:10:15,877 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=5462005c6a2947b8b3669c435bd17a40
-2025-05-02 22:10:15,877 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=5462005c6a2947b8b3669c435bd17a40
-2025-05-02 22:10:16,135 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=5462005c6a2947b8b3669c435bd17a40 "HTTP/1.1 202 Accepted"
-2025-05-02 22:10:16,139 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=5462005c6a2947b8b3669c435bd17a40 "HTTP/1.1 202 Accepted"
-2025-05-02 22:10:16,142 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=5462005c6a2947b8b3669c435bd17a40 "HTTP/1.1 202 Accepted"
-2025-05-02 22:10:17,757 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 22:10:18,537 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 22:10:18,538 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=d3dda149858c408f8668968ad6c1ef31
-2025-05-02 22:10:18,538 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=d3dda149858c408f8668968ad6c1ef31
-2025-05-02 22:10:18,804 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=d3dda149858c408f8668968ad6c1ef31 "HTTP/1.1 202 Accepted"
-2025-05-02 22:10:18,808 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=d3dda149858c408f8668968ad6c1ef31 "HTTP/1.1 202 Accepted"
-2025-05-02 22:10:18,811 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=d3dda149858c408f8668968ad6c1ef31 "HTTP/1.1 202 Accepted"
-2025-05-02 22:11:26,302 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:11:28,346 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:11:28,347 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:11:28,347 - INFO - perception:extract_perception:51 - Perception response: {"intent": "summarize unread emails", "entities": ["important", "unread emails"], "tool_hint": "Email", "user_input": "Do I have any important unread emails, can you summarize?"}
-2025-05-02 22:11:28,348 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "summarize unread emails", "entities": ["important", "unread emails"], "tool_hint": "Email", "user_input": "Do I have any important unread emails, can you summarize?"}
-2025-05-02 22:11:28,348 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "summarize unread emails", "entities": ["important", "unread emails"], "tool_hint": "Email", "user_input": "Do I have any important unread emails, can you summarize?"}
-2025-05-02 22:11:28,558 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:11:30,556 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:11:30,558 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:11:30,768 - INFO - action:log:20 - [22:11:30] [parser] Parsed: get-unread-emails → {}
-2025-05-02 22:11:30,769 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8001/sse
-2025-05-02 22:11:31,507 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8001/sse "HTTP/1.1 200 OK"
-2025-05-02 22:11:31,508 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8001/messages/?session_id=32974849aea94fdbaa3a6a25b5950024
-2025-05-02 22:11:31,508 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8001/messages/?session_id=32974849aea94fdbaa3a6a25b5950024
-2025-05-02 22:11:31,777 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=32974849aea94fdbaa3a6a25b5950024 "HTTP/1.1 202 Accepted"
-2025-05-02 22:11:31,781 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=32974849aea94fdbaa3a6a25b5950024 "HTTP/1.1 202 Accepted"
-2025-05-02 22:11:31,783 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=32974849aea94fdbaa3a6a25b5950024 "HTTP/1.1 202 Accepted"
-2025-05-02 22:14:07,110 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:14:13,081 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
-2025-05-02 22:14:13,096 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 22:14:13,868 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 22:14:13,869 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=4afffbcbf8b54e88a935de7da76f9a10
-2025-05-02 22:14:13,869 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=4afffbcbf8b54e88a935de7da76f9a10
-2025-05-02 22:14:14,134 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=4afffbcbf8b54e88a935de7da76f9a10 "HTTP/1.1 202 Accepted"
-2025-05-02 22:14:14,137 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=4afffbcbf8b54e88a935de7da76f9a10 "HTTP/1.1 202 Accepted"
-2025-05-02 22:14:14,139 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=4afffbcbf8b54e88a935de7da76f9a10 "HTTP/1.1 202 Accepted"
-2025-05-02 22:14:15,692 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 22:14:16,393 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 22:14:16,401 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=bbec42dcc48146ce8f92be61d978c857
-2025-05-02 22:14:16,401 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=bbec42dcc48146ce8f92be61d978c857
-2025-05-02 22:14:16,657 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=bbec42dcc48146ce8f92be61d978c857 "HTTP/1.1 202 Accepted"
-2025-05-02 22:14:16,661 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=bbec42dcc48146ce8f92be61d978c857 "HTTP/1.1 202 Accepted"
-2025-05-02 22:14:16,663 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=bbec42dcc48146ce8f92be61d978c857 "HTTP/1.1 202 Accepted"
-2025-05-02 22:14:56,543 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:14:58,672 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:14:58,673 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:14:58,674 - INFO - perception:extract_perception:51 - Perception response: {"intent": "Summarize unread emails", "entities": ["unread", "emails"], "tool_hint": "Email", "user_input": "Summarize any unread emails I have"}
-2025-05-02 22:14:58,674 - INFO - perception:extract_perception:58 - Perception raw: {"intent": "Summarize unread emails", "entities": ["unread", "emails"], "tool_hint": "Email", "user_input": "Summarize any unread emails I have"}
-2025-05-02 22:14:58,674 - INFO - perception:extract_perception:62 - Perception clean: {"intent": "Summarize unread emails", "entities": ["unread", "emails"], "tool_hint": "Email", "user_input": "Summarize any unread emails I have"}
-2025-05-02 22:14:58,885 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:15:00,820 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-02 22:15:00,821 - INFO - models:generate_content:5022 - AFC remote call 1 is done.
-2025-05-02 22:15:01,037 - INFO - action:log:20 - [22:15:01] [parser] Parsed: get-unread-emails → {}
-2025-05-02 22:15:01,038 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8001/sse
-2025-05-02 22:15:01,845 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8001/sse "HTTP/1.1 200 OK"
-2025-05-02 22:15:01,846 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8001/messages/?session_id=592358b705354662825fccb70eae8dc6
-2025-05-02 22:15:01,846 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8001/messages/?session_id=592358b705354662825fccb70eae8dc6
-2025-05-02 22:15:02,106 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=592358b705354662825fccb70eae8dc6 "HTTP/1.1 202 Accepted"
-2025-05-02 22:15:02,110 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=592358b705354662825fccb70eae8dc6 "HTTP/1.1 202 Accepted"
-2025-05-02 22:15:02,114 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8001/messages/?session_id=592358b705354662825fccb70eae8dc6 "HTTP/1.1 202 Accepted"
-2025-05-02 22:17:28,910 - INFO - models:generate_content:5011 - AFC is enabled with max remote calls: 10.
-2025-05-02 22:17:33,654 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
-2025-05-02 22:17:33,670 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 22:17:34,402 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 22:17:34,403 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=a1c6db97f6d74e229fd911f8f7a04921
-2025-05-02 22:17:34,403 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=a1c6db97f6d74e229fd911f8f7a04921
-2025-05-02 22:17:34,663 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=a1c6db97f6d74e229fd911f8f7a04921 "HTTP/1.1 202 Accepted"
-2025-05-02 22:17:34,667 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=a1c6db97f6d74e229fd911f8f7a04921 "HTTP/1.1 202 Accepted"
-2025-05-02 22:17:34,670 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=a1c6db97f6d74e229fd911f8f7a04921 "HTTP/1.1 202 Accepted"
-2025-05-02 22:17:36,332 - INFO - sse:sse_client:45 - Connecting to SSE endpoint: http://localhost:8002/sse
-2025-05-02 22:17:37,093 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8002/sse "HTTP/1.1 200 OK"
-2025-05-02 22:17:37,096 - INFO - sse:sse_reader:65 - Received endpoint URL: http://localhost:8002/messages/?session_id=9c7a863bfee14b469c47d58a461f893c
-2025-05-02 22:17:37,099 - INFO - sse:sse_client:135 - Starting post writer with endpoint URL: http://localhost:8002/messages/?session_id=9c7a863bfee14b469c47d58a461f893c
-2025-05-02 22:17:37,355 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=9c7a863bfee14b469c47d58a461f893c "HTTP/1.1 202 Accepted"
-2025-05-02 22:17:37,358 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=9c7a863bfee14b469c47d58a461f893c "HTTP/1.1 202 Accepted"
-2025-05-02 22:17:37,362 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8002/messages/?session_id=9c7a863bfee14b469c47d58a461f893c "HTTP/1.1 202 Accepted"
+2025-05-03 00:59:15,842 - INFO - session:initialize:173 - Schema: No schema
+2025-05-03 00:59:15,842 - INFO - session:initialize:174 - ----------------------------------------
